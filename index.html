@@ -9,9 +9,9 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap');
 :root{--ink:#0a0a0a;--cream:#f1eee7;--paper:#e7e3db;--red:#e52f35;--gray:#8b8881;--line:#292929;--darkline:#c2beb5;--max:1380px}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:#fff;font-family:'DM Sans',Arial,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;word-spacing:normal}a{color:inherit;text-decoration:none}img{display:block;width:100%}button{font:inherit}h1,h2,h3,p{margin:0}h1,h2,h3{font-weight:600;letter-spacing:-.065em;word-spacing:normal}.wrap{width:min(var(--max),calc(100% - 56px));margin:auto}.mono,.ey{font-family:'DM Mono',monospace}.ey{font-size:11px;line-height:1.2;letter-spacing:.08em;text-transform:uppercase}.red{color:var(--red)}
-nav{height:86px;border-bottom:1px solid var(--line);position:relative;z-index:20;background:rgba(10,10,10,.96)}.navin{height:100%;display:flex;align-items:center;justify-content:space-between}.logo{width:124px;filter:brightness(0) invert(1)}.navlinks{display:flex;align-items:center;gap:34px;font-size:11px;text-transform:uppercase;letter-spacing:.08em}.navlinks a{opacity:.72;transition:.2s}.navlinks a:hover{opacity:1;color:var(--red)}.navcta{border:1px solid #555;padding:12px 18px;border-radius:999px;transition:transform .28s cubic-bezier(.22,1,.36,1),background .2s,border-color .2s,box-shadow .28s ease;position:relative;z-index:1}.navcta:hover{background:var(--red);border-color:#fff;color:#fff;transform:translateY(-3px) scale(1.055);box-shadow:0 0 0 3px rgba(255,255,255,.95),0 10px 28px rgba(255,255,255,.16),0 0 32px rgba(255,255,255,.18)}.navcta:active{transform:translateY(-1px) scale(1.025)}.hamb{display:none;border:0;background:none;color:#fff;font-size:25px}
+nav{height:86px;border-bottom:1px solid var(--line);position:relative;z-index:20;background:rgba(10,10,10,.96)}.navin{height:100%;display:flex;align-items:center;justify-content:space-between}.logo{width:124px;filter:brightness(0) invert(1)}.navlinks{display:flex;align-items:center;gap:34px;font-size:11px;text-transform:uppercase;letter-spacing:.08em}.navlinks a{opacity:.72;transition:.2s}.navlinks a:hover{opacity:1;color:var(--red)}.navcta{border:1px solid #555;padding:12px 18px;border-radius:999px;transition:transform .28s cubic-bezier(.22,1,.36,1),background .2s,border-color .2s,box-shadow .28s ease;position:relative;z-index:1}.navcta:hover{background:transparent;border-color:#fff;color:#fff;transform:translateY(-3px) scale(1.055);box-shadow:0 0 0 3px rgba(255,255,255,.95),0 10px 28px rgba(255,255,255,.16),0 0 32px rgba(255,255,255,.18)}.navcta:active{transform:translateY(-1px) scale(1.025)}.hamb{display:none;border:0;background:none;color:#fff;font-size:25px}
 .hero{position:relative;background:var(--ink);border-bottom:1px solid var(--line);overflow:hidden}
-.hero-top{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(360px,.72fr);gap:90px;align-items:center;min-height:calc(100vh - 86px);padding:82px 0 92px}
+.hero-top{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(360px,.72fr);grid-template-rows:1fr auto;gap:28px 90px;align-items:center;min-height:calc(100vh - 86px);padding:70px 0 48px}
 .hero h1{font-size:clamp(64px,9.7vw,154px);line-height:.82;max-width:980px;transform:translateY(-48px)}
 .hero-top > div:first-child .ey{transform:translateY(-48px)}
 .hero h1 em{font-style:normal;color:var(--red)}
@@ -20,7 +20,7 @@ nav{height:86px;border-bottom:1px solid var(--line);position:relative;z-index:20
 .hero-ad img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:grayscale(100%)}
 .hero-ad:after{content:"DAVID OGILVY / ROLLS-ROYCE";position:absolute;left:18px;bottom:18px;background:rgba(10,10,10,.88);color:#fff;padding:10px 12px;font:10px 'DM Mono',monospace;letter-spacing:.08em}
 .hero-note{margin-top:22px;display:flex;justify-content:space-between;gap:20px;border-top:1px solid #303030;padding-top:16px;color:#aaa69e;font-size:12px;line-height:1.45}
-.hero-cta-wrap{display:flex;justify-content:center;padding:0 0 34px;position:relative;z-index:2}.hero-cta{display:inline-flex;align-items:center;justify-content:center;gap:14px;background:var(--red);color:#fff;border:1px solid var(--red);padding:16px 24px;border-radius:999px;font:11px 'DM Mono',monospace;letter-spacing:.06em;text-transform:uppercase;box-shadow:0 10px 35px rgba(229,47,53,.18);transition:transform .28s cubic-bezier(.22,1,.36,1),box-shadow .28s ease,background .2s,border-color .2s}.hero-cta:after{content:'→';font-size:15px;line-height:1}.hero-cta:hover{background:#fff;color:var(--red);border-color:#fff;transform:translateY(-4px) scale(1.035);box-shadow:0 0 0 3px rgba(255,255,255,.16),0 16px 40px rgba(255,255,255,.12)}
+.hero-cta-wrap{grid-column:1/-1;display:flex;justify-content:center;padding:4px 0 0;position:relative;z-index:2}.hero-cta{display:inline-flex;align-items:center;justify-content:center;gap:14px;background:var(--red);color:#fff;border:1px solid var(--red);padding:16px 24px;border-radius:999px;font:11px 'DM Mono',monospace;letter-spacing:.06em;text-transform:uppercase;box-shadow:0 10px 35px rgba(229,47,53,.18);transition:transform .28s cubic-bezier(.22,1,.36,1),box-shadow .28s ease,background .2s,border-color .2s}.hero-cta:after{content:'→';font-size:15px;line-height:1}.hero-cta:hover{background:#fff;color:var(--red);border-color:#fff;transform:translateY(-4px) scale(1.035);box-shadow:0 0 0 3px rgba(255,255,255,.16),0 16px 40px rgba(255,255,255,.12)}
 .nav-logo{width:118px;height:auto;display:block}
 
 .marquee{background:var(--red);color:#fff;overflow:hidden;white-space:nowrap;border-bottom:1px solid #000}.marquee-track{display:flex;width:max-content;animation:move 28s linear infinite}.marquee span{font-size:14px;letter-spacing:.06em;padding:20px 32px;border-right:1px solid rgba(255,255,255,.25)}.marquee b{font-weight:600}@keyframes move{to{transform:translateX(-50%)}}
@@ -40,7 +40,7 @@ footer{background:var(--ink);padding:60px 0 28px}.footer-top{display:flex;justif
 @media(max-width:560px){.wrap{width:calc(100% - 28px)}nav{height:76px}.logo{width:105px}.hero-top{padding:60px 0 45px}.hero h1{font-size:19vw}.hero-art-main{height:390px}.hero-art-side{padding:32px}.about,.swipes,.process,.manifesto,.faq{padding:100px 0}.numbers{padding-bottom:90px}.services{padding-bottom:100px}.number-grid{grid-template-columns:1fr}.number,.number:not(:first-child){padding:28px 0;border-right:0}.number:last-child{border-bottom:0}.service{padding:28px 0}.service h3{font-size:30px}.swipe-image{height:360px}.andromeda-statement{padding:32px}.andromeda-bottom{padding-top:75px}.angle-grid{grid-template-columns:1fr 1fr}.angle-grid div:nth-child(3n){border-right:1px solid #3a3936}.angle-grid div:nth-child(2n){border-right:0}.cta{padding:100px 0}.cta h2{font-size:18vw}.footer-links{gap:16px}}
 
 @media (max-width:900px){
-  .hero-top{grid-template-columns:1fr;gap:48px;min-height:auto;padding:78px 0 70px}
+  .hero-top{grid-template-columns:1fr;grid-template-rows:auto auto auto;gap:38px;min-height:auto;padding:78px 0 52px}
   .hero h1{font-size:clamp(58px,13vw,105px);transform:translateY(-22px)}
 .hero-top > div:first-child .ey{transform:translateY(-22px)}
   .hero-side{max-width:680px}
@@ -86,9 +86,9 @@ footer{background:var(--ink);padding:60px 0 28px}.footer-top{display:flex;justif
         <span>Research. Idea. Proof. Response.</span>
       </div>
     </div>
-  </div>
-  <div class="wrap hero-cta-wrap hero-reveal delay-3">
-    <a class="hero-cta" href="https://calendly.com/omar-nabil-advertising" target="_blank" rel="noopener">Book a Quick Discovery Call</a>
+    <div class="hero-cta-wrap hero-reveal delay-3">
+      <a class="hero-cta" href="https://calendly.com/omar-nabil-advertising" target="_blank" rel="noopener">Book a Quick Discovery Call</a>
+    </div>
   </div>
 </section>
 <div class="marquee"><div class="marquee-track"><span><b>Research</b> →</span><span><b>Angles</b> →</span><span><b>Hooks</b> →</span><span><b>Offers</b> →</span><span><b>Copy</b> →</span><span><b>Scripts</b> →</span><span><b>Testing</b> →</span><span><b>Research</b> →</span><span><b>Angles</b> →</span><span><b>Hooks</b> →</span><span><b>Offers</b> →</span><span><b>Copy</b> →</span><span><b>Scripts</b> →</span><span><b>Testing</b> →</span></div></div>
